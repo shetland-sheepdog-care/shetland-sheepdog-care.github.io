@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shetland-sheepdog-care.github.io/sitemap.xml
