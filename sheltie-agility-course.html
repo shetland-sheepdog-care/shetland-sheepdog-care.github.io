@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sheltie Agility Course Builder | Build and print a course map</title><meta name="description" content="Shetland Sheepdog guides: practical behaviour, grooming and everyday care. Build an agility course for your Sheltie."><link rel="canonical" href="https://shetland-sheepdog-care.github.io/sheltie-agility-course.html"><style id="ssc-design">
+:root{--ssc-paper:#f5efe0;--ssc-ink:#2a241b;--ssc-sepia:#8b6f4a;--ssc-ochre:#c4923a;--ssc-cream:#faf3e6;--ssc-brown:#4a3522;--ssc-faded:#d4c4a8;--ssc-warm:#e8dcc8;--ssc-card:#fffbf0;--ssc-bar:#4a3522;--ssc-bartext:#f5efe0;--ssc-thin:4px;--ssc-r:4px;--ssc-hf:"Crimson Text",Georgia,serif;--ssc-bf:"Mukta","Helvetica Neue",Helvetica,Arial,sans-serif;--ssc-mono:"Courier New",monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--ssc-paper);color:var(--ssc-ink);font:16px/1.75 var(--ssc-bf)}h1,h2,h3,h4{font-family:var(--ssc-hf);line-height:1.1;letter-spacing:.01em}h1{font-size:clamp(32px,6vw,58px);word-break:break-word;font-weight:700}h2{font-size:clamp(22px,3.5vw,34px);font-weight:700}h3{font-size:clamp(17px,2.5vw,24px)}a{color:#0066cc}a:visited{color:#0052a3}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--ssc-ochre);outline-offset:3px}
+.ssc-mast{background:var(--ssc-bar);color:var(--ssc-bartext);border-bottom:var(--ssc-thin) solid var(--ssc-ochre);position:sticky;top:0;z-index:100}.ssc-mast>div{max-width:1280px;margin:auto;padding:8px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:64px}.ssc-brand,.ssc-brand:visited{font:700 1.6rem/1 var(--ssc-hf);color:var(--ssc-bartext);text-decoration:none;letter-spacing:-.02em;text-transform:none;border-bottom:2px solid var(--ssc-ochre);padding:0 0 4px}.ssc-nav{display:flex;gap:2px;flex-wrap:wrap}.ssc-nav a,.ssc-nav a:visited{display:block;color:var(--ssc-bartext);padding:10px 14px;min-height:44px;border:1px solid transparent;text-decoration:none;font-weight:600;font-size:.86rem;letter-spacing:.04em}.ssc-nav a:hover,.ssc-nav a[aria-current]{border-color:var(--ssc-ochre);background:rgba(196,146,58,0.2);text-decoration:none}.ssc-mobile{display:none;cursor:pointer}.ssc-mobile summary{list-style:none;padding:10px 14px;border:1px solid var(--ssc-ochre);font-weight:600;font-size:.88rem;color:var(--ssc-bartext)}.ssc-mobile nav{position:absolute;right:16px;background:var(--ssc-bar);border:2px solid var(--ssc-ochre);padding:20px;z-index:10;min-width:220px}.ssc-mobile nav a{display:block;padding:12px 10px;color:var(--ssc-bartext);font-weight:700;text-decoration:none;border-bottom:1px solid var(--ssc-faded)}.ssc-mobile nav a:last-child{border-bottom:none}
+.layout{max-width:1280px;margin:auto;padding:0 28px;display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:36px;align-items:start}.article{min-width:0;background:var(--ssc-cream);padding:32px;border:1px solid var(--ssc-faded);box-shadow:4px 4px 0 rgba(0,0,0,.06)}article a{color:#0066cc}article a:visited{color:#0052a3}.article-breadcrumb,.breadcrumb{font-size:.82rem;display:flex;flex-wrap:wrap;gap:6px 12px;line-height:1.7;color:var(--ssc-sepia)}.article-breadcrumb a{color:var(--ssc-ochre);font-weight:600}.article-breadcrumb [aria-current]{color:var(--ssc-ink);font-weight:600}
+.sidebar{display:block;min-width:0;position:sticky;top:20px;max-height:calc(100vh - 40px);overflow:auto}.sidebar-panel,.ssc-panel{border:1px solid var(--ssc-faded);padding:22px;margin-bottom:20px;background:var(--ssc-cream)}.sidebar h3{font-size:1.15rem;color:var(--ssc-brown);margin:0 0 10px;text-transform:uppercase;letter-spacing:.08em}.ssc-kicker{font:600 .72rem/1.6 var(--ssc-bf);letter-spacing:.14em;text-transform:uppercase;display:block;color:var(--ssc-sepia)}.ssc-button,.ssc-button:visited,button{display:inline-block;background:var(--ssc-ochre);color:var(--ssc-cream);border:1px solid var(--ssc-brown);padding:12px 22px;font:700 .95rem/1.3 var(--ssc-bf);text-decoration:none;cursor:pointer;letter-spacing:.04em;text-transform:uppercase;transition:background .15s}.ssc-button:hover,button:hover{background:var(--ssc-brown);color:var(--ssc-cream)}.ssc-button-sm{padding:9px 16px;font-size:.85rem}
+/* Hero */
+.ssc-hero{background:var(--ssc-brown);color:var(--ssc-cream);border-bottom:var(--ssc-thin) solid var(--ssc-ochre);padding:56px 0}.ssc-hero-inner{display:grid;grid-template-columns:1.4fr 1fr;gap:44px;max-width:1280px;margin:auto;padding:0 28px}.ssc-hero h1{color:var(--ssc-cream);font-size:clamp(34px,7vw,64px)}.ssc-hero p{max-width:580px;opacity:.9;font-size:1.03rem}.ssc-boxout{border:2px solid var(--ssc-ochre);background:var(--ssc-sepia);padding:26px;align-self:start;transform:rotate(-.3deg)}.ssc-boxout .ssc-kicker{color:var(--ssc-cream)}.ssc-boxout h2{color:var(--ssc-cream);margin:6px 0;font-size:clamp(20px,3vw,32px)}
+/* Cards */
+.ssc-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.card{position:relative;padding:24px;background:var(--ssc-card);border:1px solid var(--ssc-faded);border-radius:var(--ssc-r);border-left:4px solid var(--ssc-ochre);box-shadow:3px 3px 0 rgba(0,0,0,.04);transition:transform .1s,box-shadow .1s}.card:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(0,0,0,.07)}.card h2{font-size:clamp(18px,3vw,28px);margin:0 0 10px;color:var(--ssc-brown)}.card .ssc-kicker{margin-bottom:6px;font-size:.68rem}.card-date{font-size:.8rem;color:var(--ssc-sepia)}.card p{margin:0 0 8px;font-size:.92rem;color:var(--ssc-ink)}.card h2 a{color:var(--ssc-brown);text-decoration:none}.card h2 a::after{content:"";position:absolute;inset:0}.card:first-of-type{grid-column:1/-1;border-left:6px solid var(--ssc-ochre);background:var(--ssc-cream)}.card:first-of-type h2{font-size:clamp(22px,4vw,34px);color:var(--ssc-ink)}
+/* Paths */
+.ssc-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.ssc-path{padding:20px;border:1px solid var(--ssc-faded);background:var(--ssc-cream);border-top:5px solid var(--ssc-ochre)}.ssc-path h2{font-size:clamp(18px,2.8vw,26px);margin:0 0 8px;color:var(--ssc-brown)}.ssc-path p{margin:0 0 10px;font-size:.9rem;color:var(--ssc-sepia)}.ssc-path a{color:var(--ssc-ochre);font-weight:600}.ssc-path-sym{font:2.2rem/1 var(--ssc-hf);color:var(--ssc-ink);margin-bottom:6px}
+/* Steps */
+.ssc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:36px}.ssc-step{position:relative;padding:22px 18px 18px;border:1px solid var(--ssc-faded);background:var(--ssc-cream);border-bottom:4px solid var(--ssc-ochre)}.ssc-step h3{font-size:clamp(16px,2.5vw,24px);color:var(--ssc-brown);margin:0 0 8px}.ssc-step p{margin:0;font-size:.88rem;color:var(--ssc-sepia)}.ssc-step::before{content:attr(data-num);position:absolute;top:-10px;left:-1px;background:var(--ssc-ochre);color:var(--ssc-cream);font:700 1.2rem/1 var(--ssc-mono);padding:2px 8px;letter-spacing:.06em}
+/* Stats */
+.ssc-stats{background:var(--ssc-brown);color:var(--ssc-cream);border-top:var(--ssc-thin) solid var(--ssc-ochre);border-bottom:var(--ssc-thin) solid var(--ssc-ochre);padding:44px 0;margin:36px 0}.ssc-stats>div{max-width:1280px;margin:auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:center}.ssc-stat-fig{font:700 clamp(32px,4vw,52px)/1 var(--ssc-hf);color:var(--ssc-cream);letter-spacing:.02em}.ssc-stat-label{font:.8rem/1.5 var(--ssc-bf);color:var(--ssc-faded);margin-top:6px;text-transform:uppercase;letter-spacing:.08em}
+/* Closing */
+.ssc-finish{background:var(--ssc-brown);color:var(--ssc-cream);border-top:var(--ssc-thin) solid var(--ssc-ochre);padding:52px 0;text-align:center}.ssc-finish>div{max-width:700px;margin:auto;padding:0 28px}.ssc-finish h2{color:var(--ssc-cream);font-size:clamp(26px,5vw,44px)}.ssc-finish p{color:var(--ssc-faded);margin:0 0 20px}.ssc-finish .ssc-button{background:var(--ssc-ochre);border-color:var(--ssc-cream)}.ssc-finish ul{list-style:none;padding:0;margin:0 0 26px;display:inline-block}.ssc-finish li{padding:7px 0;font:1rem/1.5 var(--ssc-bf);color:var(--ssc-faded)}.ssc-finish li::before{content:"\2713\0020";color:var(--ssc-ochre);font-weight:700}
+/* Footer */
+.ssc-footer{background:var(--ssc-brown);color:var(--ssc-faded);border-top:5px solid var(--ssc-ochre);padding:36px 28px;margin-top:44px}.ssc-footer>div{max-width:1280px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px}.ssc-footer h3{font-size:1rem;color:var(--ssc-cream);margin:0 0 12px;text-transform:uppercase;letter-spacing:.08em}.ssc-footer p{margin:0 0 6px;font-size:.85rem}.ssc-footer a{color:var(--ssc-faded);display:inline-block;padding:6px 0;font-size:.85rem}.ssc-footer a:hover{color:var(--ssc-cream)}.ssc-footer .ssc-brand{border-color:var(--ssc-ochre);display:inline-block;margin-bottom:8px}.ssc-footer-bot{border-top:1px solid var(--ssc-ochre);margin-top:22px;padding-top:16px;text-align:center;font-size:.78rem;color:var(--ssc-sepia)}
+/* Article-specific elements */
+.ssc-article-hero{max-width:1280px;margin:auto;padding:36px 28px;display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:36px}.ssc-article-hero .hero-inner{min-width:0;width:100%;max-width:none}.ssc-article-hero h1{font-size:clamp(24px,3.5vw,40px);overflow-wrap:anywhere;color:var(--ssc-ink)}.ssc-article-hero .lead{max-width:100%;overflow-wrap:anywhere;font-size:.98rem}.ssc-article-hero .hero-photo{margin:20px 0 0;max-width:100%}.ssc-article-hero .hero-photo img{display:block;width:100%;height:auto;object-fit:cover;object-position:50% 25%}
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:18px 0}th{background:var(--ssc-ochre);color:var(--ssc-cream);padding:10px 14px;text-align:left;font-weight:700;border:1px solid var(--ssc-faded)}td{padding:10px 14px;border:1px solid var(--ssc-faded);vertical-align:top}tr:nth-child(even) td{background:var(--ssc-paper)}
+/* FAQ */
+details{margin:10px 0;background:var(--ssc-cream);border:1px solid var(--ssc-faded)}summary{padding:12px 16px;cursor:pointer;font-weight:600;color:var(--ssc-brown)}details[open] summary{background:var(--ssc-paper)}details>div{padding:0 16px 12px;font-size:.9rem}
+/* Callout */
+.ssc-callout{border-left:5px solid var(--ssc-ochre);background:var(--ssc-paper);padding:14px 18px;margin:18px 0 22px;border-radius:0 4px 4px 0}
+/* Skip link */
+.ssc-skip{position:absolute;left:-999px;top:8px;z-index:50;background:var(--ssc-cream);border:2px solid var(--ssc-ochre);padding:10px 16px;font:600 15px/1.4 var(--ssc-bf);text-decoration:none;color:var(--ssc-ink)}.ssc-skip:focus{left:8px}
+@media(min-width:1025px) and (max-width:1439px){.layout,.ssc-hero-inner,.ssc-article-hero{padding-left:48px;padding-right:48px}h1{font-size:clamp(28px,4vw,48px)}}
+@media(max-width:1024px){.layout{grid-template-columns:minmax(0,1fr) 240px;gap:24px}.ssc-hero-inner{gap:26px}.ssc-steps{grid-template-columns:repeat(2,1fr)}.ssc-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:767px){.ssc-mast>div{padding:10px 16px;display:block}.ssc-mast .ssc-nav{display:none}.ssc-mobile{display:block}.ssc-brand{font-size:1.2rem;margin-bottom:6px}.layout,.ssc-hero-inner,.ssc-article-hero{padding:22px 14px}.ssc-hero-inner,.layout,.ssc-paths,.ssc-cards,.ssc-footer>div{grid-template-columns:1fr}.ssc-article-hero{grid-template-columns:1fr;padding:22px 14px}.ssc-article-hero h1{font-size:28px}.article{padding:20px}.sidebar{display:block;position:static;max-height:none;overflow:visible;margin-top:20px}.ssc-steps{grid-template-columns:1fr}.ssc-stats>div{grid-template-columns:repeat(2,1fr);gap:16px}.card{border-left-width:3px}.ssc-hero-inner .ssc-boxout{transform:none}}
+@media print{body{background:white;color:black}.ssc-mast,.ssc-footer,.sidebar,.ssc-no-print,.ssc-finish,.ssc-stats{display:none!important}.layout{display:block;padding:0}.article{border:0;padding:0;background:white;box-shadow:none}.ssc-skip{display:none!important}a{color:black!important}table{border:1px solid #ccc}th{background:#eee;color:black}}
+</style><script>window.dataLayer=window.dataLayer||[];function sscTrack(n,p){window.dataLayer.push(Object.assign({event:'ssc_'+n,site:'shetland-sheepdog-care'},p||{}));if(window.gtag)window.gtag('event','ssc_'+n,p||{});}document.addEventListener('click',function(e){var a=e.target.closest('[data-ssc-from]');if(a)sscTrack('cta_click',{from:a.dataset.sscFrom});});</script></head><body><a class="ssc-skip" href="#content">Skip to content</a><header class="ssc-mast"><div><a class="ssc-brand" href="/">Shetland<br>Sheepdog Guide</a><nav class="ssc-nav" aria-label="Main"><a href="/blog.html">Blog</a><a href="/">Home</a><a href="/sheltie-agility-course.html">Course builder</a><a href="/about.html">About</a></nav><details class="ssc-mobile"><summary>Menu ↓</summary><nav aria-label="Mobile"><a href="/blog.html">Blog</a><a href="/">Home</a><a href="/sheltie-agility-course.html">Course builder</a><a href="/about.html">About</a></nav></details></div></header><div class="layout"><article class="article" id="content"><nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span> / </span><span aria-current="page">Agility course builder</span></nav><p class="ssc-kicker">01 / Interactive tool</p><h1>Sheltie Agility Course Builder</h1><p>Drag obstacles onto a 4×5 grid, arrange them to build a course, then print a map for your Sheltie's training session. No sign-up needed.</p>
+
+<div id="ssc-course-app" class="ssc-no-print" style="margin:22px 0 32px;padding:20px;background:var(--ssc-paper);border:2px solid var(--ssc-faded);border-radius:4px">
+<div style="display:grid;grid-template-columns:1fr 280px;gap:20px;align-items:start">
+
+<div>
+<h3 style="font-size:1.05rem;margin:0 0 10px;color:var(--ssc-brown)">Course grid <span style="font-size:.78rem;color:var(--ssc-sepia)">(4 rows × 5 columns)</span></h3>
+<div id="ssc-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--ssc-faded);padding:4px;border:2px solid var(--ssc-sepia);border-radius:4px"></div>
+<div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+<button class="ssc-button ssc-button-sm" id="ssc-clear">Clear all</button>
+<button class="ssc-button ssc-button-sm" id="ssc-random">Random course</button>
+<button class="ssc-button ssc-button-sm" id="ssc-print-btn" style="background:var(--ssc-brown);border-color:var(--ssc-ochre)">Print map →</button>
+</div>
+</div>
+
+<div>
+<h3 style="font-size:1.05rem;margin:0 0 10px;color:var(--ssc-brown)">Obstacles</h3>
+<div id="ssc-obstacles" style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:4px;background:var(--ssc-faded);border-radius:4px"></div>
+<p style="font-size:.78rem;color:var(--ssc-sepia);margin:8px 0 0">Click an obstacle to place it on the grid. Click a placed obstacle to remove it.</p>
+</div>
+</div>
+
+<div id="ssc-course-name" style="margin-top:14px;padding:10px 14px;background:var(--ssc-cream);border:1px solid var(--ssc-faded)">
+<label style="font-weight:600;font-size:.9rem;color:var(--ssc-brown)">Course name (optional): <input type="text" id="ssc-name-input" style="width:60%;padding:6px 10px;border:1px solid var(--ssc-faded);border-radius:3px;font-size:.9rem" placeholder="e.g. Weekend warm-up"></label>
+</div>
+
+<div id="ssc-print-view" style="display:none;margin-top:20px;padding:20px;background:white;border:2px solid var(--ssc-ink);font-family:var(--ssc-mono)" aria-live="polite">
+<h2 style="font-size:1.2rem;margin:0 0 6px;color:var(--ssc-ink)">Course map</h2>
+<p style="font-size:.82rem;color:var(--ssc-sepia);margin:0 0 12px" id="ssc-print-name"></p>
+<div id="ssc-print-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;border:2px solid black;padding:2px;margin-bottom:10px"></div>
+<p style="font-size:.75rem;margin:8px 0 0">Legend: T=Tunnel, J=Jump, W=Weave, R=Tire, P=Platform, B=Pause box, V=Weave pole</p>
+<p style="font-size:.7rem;color:var(--ssc-sepia)">Use the browser print function (Ctrl+P) to save or print this map.</p>
+<button class="ssc-button ssc-button-sm" id="ssc-print-close" style="margin-top:8px">Back to editor</button>
+</div>
+</div>
+
+<script>
+(function(){var GRID=document.getElementById('ssc-grid'),OBS=document.getElementById('ssc-obstacles'),ROWS=4,COLS=5,grid=[],obsList=[
+ {id:'tunnel',sym:'T',label:'Tunnel',color:'#4a3522'},
+ {id:'jump',sym:'J',label:'Jump',color:'#c4923a'},
+ {id:'weave',sym:'W',label:'Weave poles',color:'#8b6f4a'},
+ {id:'tire',sym:'R',label:'Tire',color:'#6b5030'},
+ {id:'platform',sym:'P',label:'Platform',color:'#5a4028'},
+ {id:'pause',sym:'B',label:'Pause box',color:'#3a2a18'},
+ {id:'pole',sym:'V',label:'Weave pole',color:'#7a5a38'}
+],tracked=false;
+function renderGrid(){GRID.innerHTML='';for(var r=0;r<ROWS;r++){for(var c=0;c<COLS;c++){var idx=r*COLS+c,cell=document.createElement('div'),g=grid[idx];cell.style.cssText='aspect-ratio:1;border:1px solid var(--ssc-sepia);background:var(--ssc-cream);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;font-family:var(--ssc-mono);cursor:pointer;transition:background .1s';if(g){cell.style.background=g.color;cell.textContent=g.sym;cell.title=g.label+' (click to remove)'}else{cell.style.background='var(--ssc-cream)';cell.title='Empty cell';cell.innerHTML='&nbsp;'}cell.addEventListener('click',(function(i){return function(){removeObstacle(i)}})(idx),false);GRID.appendChild(cell)}}
+if(!tracked&&grid.some(function(x){return x!==null})){tracked=true;if(typeof sscTrack==='function')sscTrack('use',{});}}
+function renderObstacles(){OBS.innerHTML='';obsList.forEach(function(o){var btn=document.createElement('button');btn.className='ssc-button ssc-button-sm';btn.style.cssText='padding:8px 6px;font-size:.78rem;margin:0';btn.textContent=o.sym+' '+o.label;btn.addEventListener('click',function(){placeObstacle(o.id)},false);OBS.appendChild(btn)})}
+function placeObstacle(id){var o=obsList.find(function(x){return x.id===id});if(!o)return;for(var i=0;i<grid.length;i++){if(grid[i]===null){grid[i]={sym:o.sym,label:o.label,color:o.color};renderGrid();if(typeof sscTrack==='function'&&!tracked){tracked=true;sscTrack('use',{})}return}}}
+function removeObstacle(idx){if(grid[idx]){grid[idx]=null;renderGrid()}}
+function clearGrid(){grid=[];for(var i=0;i<ROWS*COLS;i++)grid.push(null);tracked=false;renderGrid()}
+function randomCourse(){clearGrid();var available=[];obsList.forEach(function(o){for(var n=0;n<2;n++)available.push(o)});for(var i=0;i<grid.length;i++){if(grid[i]===null&&Math.random()<0.4&&available.length){var idx=Math.floor(Math.random()*available.length),obs=available.splice(idx,1)[0];grid[i]={sym:obs.sym,label:obs.label,color:obs.color}}}renderGrid();if(typeof sscTrack==='function')sscTrack('use',{});tracked=true}
+function showPrintView(){var name=document.getElementById('ssc-name-input').value.trim();var pg=document.getElementById('ssc-print-grid');pg.innerHTML='';for(var r=0;r<ROWS;r++){for(var c=0;c<COLS;c++){var idx=r*COLS+c,cell=document.createElement('div'),g=grid[idx];cell.style.cssText='aspect-ratio:1;border:1px solid #888;background:white;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:700;font-family:Courier New,monospace';if(g){cell.style.background='#e8dcc8';cell.textContent=g.sym}else{cell.innerHTML='&nbsp;'}pg.appendChild(cell)}}
+document.getElementById('ssc-print-name').textContent=name||'Sheltie agility course';document.getElementById('ssc-course-app').style.display='none';document.getElementById('ssc-print-view').style.display='block';document.title=document.getElementById('ssc-print-name').textContent;if(typeof sscTrack==='function')sscTrack('convert',{action:'print_view',obstacles:grid.filter(function(x){return x!==null}).length})}
+clearGrid();renderObstacles();
+document.getElementById('ssc-clear').addEventListener('click',clearGrid);
+document.getElementById('ssc-random').addEventListener('click',randomCourse);
+document.getElementById('ssc-print-btn').addEventListener('click',function(){sscTrack('view',{});showPrintView()});
+document.getElementById('ssc-print-close').addEventListener('click',function(){document.getElementById('ssc-print-view').style.display='none';document.getElementById('ssc-course-app').style.display='block';document.title='Sheltie Agility Course Builder'});
+if(typeof sscTrack==='function')sscTrack('view',{});
+})();</script>
+
+<noscript><p>Build an agility course for your Sheltie: choose from tunnels, jumps, weave poles, tires, platforms, pause boxes and weave poles. Arrange them on a 4×5 grid and print a map. JavaScript is needed for the interactive builder. A default course is shown below.</p></noscript>
+</div>
+
+<p class="ssc-callout"><strong>How it works:</strong> Click an obstacle type from the list to place it on the nearest empty grid cell. Click any placed obstacle to remove it. Use "Random course" for inspiration, then adjust to your space and your Sheltie's skill level. Print the map to take to your training area.</p>
+
+<h2>Why Agility for Shelties?</h2>
+<p>Shetland Sheepdogs are working dogs with a strong herding instinct built for quick direction changes, controlled stops and problem-solving. A well-built agility course channels that drive into a structured activity that satisfies both the body and the brain. The AKC breed profile notes that Shelties excel in dog sports like agility and rally, where their size and speed give them a natural advantage.</p>
+
+<h2>Obstacle Guide</h2>
+<table><thead><tr><th>Obstacle</th><th>What It Looks Like</th><th>Tip for Your Sheltie</th></tr></thead>
+<tbody>
+<tr><td>Tunnel</td><td>Collapsible fabric tunnel, 6–10 ft</td><td>Start with a short tunnel at the entry; Shelties are curious and will follow a treat through.</td></tr>
+<tr><td>Jump</td><td>PVC or bar jump, 6–12 in high</td><td>Begin low for your Sheltie's short legs; use a target stick to guide over.</td></tr>
+<tr><td>Weave poles</td><td>6 poles in a line, 3–4 ft apart</td><td>Walk slowly between poles at first; Shelties learn the footwork quickly.</td></tr>
+<tr><td>Tire</td><td>Tire or hoop on a stand</td><td>Hold the hoop steady and lure through with a treat at nose height.</td></tr>
+<tr><td>Platform</td><td>Flat square, 2×2 ft, 4 in high</td><td>Teach a "place" cue on low surfaces; Shelties love having a job to do.</td></tr>
+<tr><td>Pause box</td><td>Marked square on the ground</td><td>Use a settle cue in the box — great for impulse control between obstacles.</td></tr>
+<tr><td>Weave pole</td><td>Single pole, work around it</td><td>Add these singly at first, then link into a pattern as your Sheltie gains confidence.</td></tr>
+</tbody></table>
+
+<h2>Sample Course Layouts</h2>
+<p><strong>Beginner (4 obstacles):</strong> Tunnel → Jump → Platform → Pause box. Start with wide spacing and no tight turns.</p>
+<p><strong>Intermediate (8 obstacles):</strong> Jump → Weave poles → Tire → Platform → Tunnel → Pause box → Weave pole → Jump. Add a gentle turn between obstacles.</p>
+<p><strong>Advanced (12 obstacles):</strong> Fill most of the grid with a serpentine pattern alternating jumps and weave elements, with a tunnel midway and a pause box before the final jump.</p>
+
+<h2>How to Print Your Course Map</h2>
+<ol>
+<li>Build your course on the grid above.</li>
+<li>Optionally name your course.</li>
+<li>Click "Print map" to open a clean black-and-white version.</li>
+<li>Use your browser print (Ctrl+P) to save as PDF or print on paper.</li>
+<li>Click "Back to editor" to make changes.</li>
+</ol>
+</article><aside class="sidebar"><section class="ssc-panel"><h3>About this tool</h3><p>Build a custom agility course for your Sheltie by placing obstacles on a 4×5 grid. Each obstacle type targets a different skill: speed, focus, coordination or impulse control. Print the map and take it to your training area.</p></section><section class="ssc-panel"><h3>Agility tips</h3><ul style="margin:0;padding-left:14px;font-size:.9rem;color:var(--ssc-sepia)"><li>Warm up with a 5-min sniff walk before running the course.</li><li>Use high-value treats as rewards for each completed obstacle.</li><li>Run the course at your Sheltie's pace — speed comes with confidence.</li><li>End on an easy obstacle so the session finishes on a win.</li></ul></section><section class="ssc-panel"><h3>Related guides</h3><ul style="margin:0;padding-left:14px;font-size:.9rem"><li><a href="/sheltie-exercise-needs-daily-minutes.html">Exercise needs by age</a></li><li><a href="/sheltie-martingale-vs-harness.html">Harness for training</a></li></ul></section></aside></div><footer class="ssc-footer"><div><section><a class="ssc-brand" href="/">Shetland Sheepdog Guide</a><p>Practical guides on Shetland Sheepdog care, behaviour and everyday life. Researched with AI assistance and checked before publishing.</p></section><section><h3>Navigate</h3><nav aria-label="Footer"><a href="/sitemap.html">All pages</a><a href="/blog.html">Blog</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></nav></section><section><h3>Sheltie guides</h3><nav aria-label="Topics"><a href="/sheltie-puppy-brushing-desensitization.html">Puppy brushing</a><a href="/sheltie-size-height-weight.html">Size & weight</a><a href="/sheltie-martingale-vs-harness.html">Martingale vs harness</a><a href="/sheltie-agility-course.html">Course builder</a></nav></section></div><div class="ssc-footer-bot">© Shetland Sheepdog Guide. Typefaces: Crimson Text, Mukta.</div></footer></body></html>
